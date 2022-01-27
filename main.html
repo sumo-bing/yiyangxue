@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>千玺专属页面</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				background-color: skyblue;
+			}
+			a {
+				text-decoration: none;
+			}
+			#qianxi {
+				height: 50px;
+				width: 220px;
+				background-color: #FF0000;
+				margin: 0 auto;
+				margin-top: 20px;
+				border-radius: 10px;
+				box-shadow: 7px 7px 10px -3px rgba(0, 0, 0, .3);
+			}
+			h1 {
+				color: orangered;
+				margin: 3px 13px;
+				text-shadow: 5px 5px 6px rgba(0, 0, 0, .3);
+			}
+			.yijian {
+				width: 1200px;
+				margin: 20px auto;
+				
+			}
+			.yijian h3 span {
+				color: pink;
+			}
+			.clearfix:after {
+				content: "";
+				display: block;
+				height: 0;
+				clear: both;
+				visibility: hidden;
+			}
+			.clearfix {
+				*zoom: 1;
+			}
+			#prg {
+				width: auto;
+				height: 15px;
+				margin: 10px 0 10px 0;
+			}
+			li {
+				list-style: none;
+			}
+			.left {
+				float: left;
+				border: 1px solid #ccc;;
+				width: 210px;
+				height: 290px;
+				margin: 25px 0px 10px 0px;
+			}
+			.right {
+				float: left;
+				border: 1px solid #ccc;;
+				width: 900px;
+				height: 290px;
+				margin: 25px 20px 10px 0px;
+				background-color: whitesmoke;
+			}
+			p {
+				line-height: 40px;
+				font-size: 18px;
+				font-weight: 300px;
+			}
+			.w {
+				width: 1200px;
+				margin: 20px auto;
+				
+			}
+			.header {
+				height: 42px;
+				/*background-color: pink;*/
+				margin: 30px auto;
+			}
+			.logo {
+				float: left;
+				width: 198px;
+				height: 42px;
+			}
+			.nav {
+				float: left;
+				margin-left: 60px;
+			}
+			.nav ul li {
+				float: left;
+			}
+			.nav ul li a {
+				display: block;
+				height: 42px;
+				padding: 0 10px;
+				line-height: 42px;
+				font-size: 18px;
+				color: #050505;
+			}
+			.dianji {
+				display: block;
+				height: 42px;
+				padding: 0 10px;
+				line-height: 42px;
+				font-size: 18px;
+				color: #050505;
+			}
+			.nav ul li a:hover {
+				border-bottom: 2px solid red;
+				color: red;
+			}
+			.search {
+				float: left;
+				width: 412px;
+				height: 42px;
+				/*background-color: cornsilk;*/
+				margin-left: 70px;
+			}
+			.search input {
+				float: left;
+				width: 345px;
+				height: 40px;
+				border: 1px solid #00a4ff;
+				border-right: 0px;
+				color: #bfbfbf;
+				font-size: 14px;
+				padding-left: 15px;
+			}
+			.search button {
+				float: left;
+				width: 50px;
+				height: 42px;
+				/*background-color: blue;*/
+				border: 0;
+				background: url(img4.png);
+			}
+			.banner {
+				height: 421px;
+				background-color: #1c036c;
+			}
+			.banner .w {
+				height: 421px;
+				background: url(xueli7.png) no-repeat top center;
+			}
+			.subnav {
+				float: left;
+				width: 190px;
+				height: 421px;
+				background: rgba(0,0,0, 0.3);
+			}
+			.subnav ul li {
+				height: 45px;
+				line-height: 45px;
+				padding: 0 20px;
+			}
+			.subnav ul li a {
+				font-size: 14px;
+				color: #fff;
+			}
+			.subnav ul li a span {
+				float: right;
+			}
+			.subnav ul li a:hover {
+				color: orchid;
+			}
+			.list {
+				float: right;
+				width: 230px;
+				height: 300px;
+			}
+			.list h3 {
+				height: 48px;
+				background-color: #9bceea;
+				text-align: center;
+				line-height: 48px;
+				font-size: 18px;
+				color: #F5F5F5;
+			}
+			.bd ul {
+				padding: 0 15px;
+				background-color: floralwhite;
+			}
+			.bd ul li {
+				padding: 6px 0;
+				border-bottom: 1px solid #CCCCCC;
+			}
+			.bd ul li h4 {
+				font-size: 16px;
+				color: #4e4e4e;
+				font-weight: 500;
+			}
+			.goods {
+				height: 50px;
+				width: 1200px;
+				background-color: white;
+
+			}
+			.goods h3 {
+				float: left;
+				margin: 0 30px;
+				font-size: 20px;
+				line-height: 50px;
+			}
+			.goods ul {
+				float: left;
+				
+			}
+			.goods li {
+				line-height: 25px;
+				height: 25px;
+				float: left;
+				font-size: 14px;
+				padding: 0 30px;
+				margin-top: 13px;
+				border-left: 1px solid #CCCCCC;
+			}
+			.goods .mod {
+				float: right;
+				margin-right: 30px;
+				height: 50px;
+				line-height: 50px;
+				font-size: 14px;
+			}
+			.goods a:hover {
+				color: orangered;
+			}
+			.box-hd {
+				float: 45px;
+			}
+			.box-hd h3 {
+				float: left;
+				font-size: 20px;
+				color: #494949;
+			}
+			.box-hd a {
+				float: right;
+				font-size: 12px;
+				color: #a5a5a5;
+				margin-top: 10px;
+			}
+			.clear {
+				clear: both;
+			}
+			.box-bd ul {
+				width: 1225px;
+			}
+			.box .box-bd ul li{
+				float: left;
+				width: 320px;
+				height: 430px;
+				background-color: pink;
+				margin-right: 85px;
+				margin-bottom: 70px;
+			}
+			.box .box-bd ul li img {
+				width: 100%;
+				height: 100%;
+			}
+			.footer {
+				height: 200px;
+				background-color: rgba(0,0,0,0.3);
+				padding-top: 35px;
+			}
+			.copyright {
+				float:left;
+			}
+			.jiewei {
+				float: right;
+				font-size: 40px;
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="qianxi">
+			<h1>千玺专属页面</h1>
+		</div>
+		<div class="yijian clearfix">
+			<h3><span>雪</span>话语集锦</h3>
+			<div id="prg"><p>superidol的笑容都没你的甜，8月正午的阳光都没你耀眼，热爱105度的你滴滴青春的蒸馏水。</p></div>
+			<ul>
+				<li>
+					<div class="left">
+						<img src="img1.png" />
+					</div>
+					<div class="right">
+						<p class="pone">
+							我第一次知道你是在这张图片上，这张图片的本图是你们三个的合照，当时我第一次看见的时候，觉得三个人里最左边的最好看，你当时坐在最左边。
+							这是我第一次知道你，我说：“诶，左边这个人长得挺好看的，这么小就是明星了吗？我查一下他们三个吧。”
+							先查的tfboys,然后查的易烊千玺，出生日期是2000年11月28日，比我大一岁。哦，比我大一级。我当时没反应过来，后半年出生会和我同级。
+							不过你后来跳级了，还是差一级。后来就会关注tfboys的消息。我记得我看见超少年密码，我说：“诶，他们三个演剧了，必须得看。”
+							专门把网剧查出来，然后看。后来，又看了你们演的青云志，我说：“小七真可爱。”青云志只看了tf的戏份。再后来，我又看了我们的少年时代。
+							三个人里，我最喜欢尹柯了，沉稳又帅气，爱了爱了。
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="left">
+						<img src="ing2.png" />
+					</div>
+					<div class="right">
+						<p class=ptwo>
+							这是我小学三年级的照片。我呢，喜欢吃好吃的。我喜欢吃的东西基本维持不了多久，一段时间就腻了。哦，有持续喜欢的零食，冰激凌，嘻嘻。
+							小布丁是我唯一持久喜欢的零食。又好吃，又便宜，还解热。我有喜欢吃的水果，西瓜，哈密瓜，又甜又好吃。雪丽小时候是不是又善良又可爱。
+							雪丽净身高159.7cm，体重58kg。我觉得体重正合适，不许嫌我胖。娱乐圈的人都太瘦了。
+						</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="header w">
+			<div class="logo">
+				<img src="img3.png"  />
+			</div>
+		
+			<div class="nav">
+				<ul>
+					<li><a href="https://baike.baidu.com/item/易烊千玺">易烊千玺</a></li>
+					<li><a href="https://baike.baidu.com/item/长津湖/54100039">长津湖</a></li>
+					<li><a href="https://baike.baidu.com/item/奇迹·笨小孩/59872979">奇迹(点一下)</a></li>
+				</ul>
+			</div>
+			<div class="search">
+				<input type="text" value="输入关键词">
+				<button></button>
+			</div>
+			<div class="user">
+				
+			</div>
+		</div>
+		<div class="banner">
+			<div class="w">
+				<div class="subnav">
+				<ul>
+					<li><a href="#">千玺漫画1 <span> > </span></a></li>
+					<li><a href="#">千玺漫画2 <span> > </span></a></li>
+					<li><a href="#">千玺漫画3 <span> > </span></a></li>
+					<li><a href="#">千玺漫画4 <span> > </span></a></li>
+					<li><a href="#">千玺漫画5 <span> > </span></a></li>
+					<li><a href="#">千玺漫画6 <span> > </span></a></li>
+					<li><a href="#">千玺漫画7 <span> > </span></a></li>
+					<li><a href="#">千玺漫画8 <span> > </span></a></li>
+					<li><a href="#">千玺漫画9 <span> > </span></a></li>
+				</ul>
+				</div>
+				<div class="list">
+					<h3>雪丽喜欢的歌曲</h3>
+					<div class="bd">
+						<ul>
+							<li><h4>《雪花》</h4></li>
+							<li><h4>《笨小孩》</h4></li>
+							<li><h4>《大城小爱》</h4></li>
+							<li><h4>《气象站台》</h4></li>
+							<li><h4>《热爱105度的你》</h4></li>
+							<li><h4>《三行情书》</h4></li>
+							<li><h4>《时间沦陷》</h4></li>							
+							<li><h4>《你从未离去》</h4></li>
+							<li><h4>《负重一万斤长大》</h4></li>
+							<li><h4>《夜空中最亮的星》</h4></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="goods w">
+			<h3>姓名推荐</h3>
+			<ul>
+				<li><a href="#">易烊</a></li>
+				<li><a href="#">小易</a></li>
+				<li><a href="#">千玺</a></li>
+				<li><a href="#">雪丽</a></li>
+				<li><a href="#">小邓</a></li>
+			</ul>
+			<a href="#" class="mod">姓名</a>
+		</div>
+		<div class="box w">
+			<div class="box-hd">
+				<h3>千玺漫画</h3>
+				<a href="#">查看全部</a>
+			</div>
+			<div class="clear"></div>
+			<div class="box-bd">
+				<ul>
+					<li>
+						<img src="img.png" alt="">
+					</li>
+					<li>
+						<img src="tuxue.png">
+					</li>
+					<li>
+						<img src="tuxue2.png">
+					</li>
+					<li>
+						<img src="tuxue3.png">
+					</li>
+					<li>
+						<img src="tuxue4.png">
+					</li>
+					<li>
+						<img src="tuxue5.png">
+					</li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="footer">
+			<div class="w">
+				<div class="copyright">
+					<img src="img3.png" >
+					<p>
+						落在了你的脸颊，慢慢融化<br/>
+						雪慢慢落在心上，生根发芽<br/>
+						雪一片片地融化，眼角泛起泪花
+					</p>
+				</div>
+				<div class="jiewei">
+					<h1>
+						谢谢你，千玺。
+					</h1>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+					
+							
+					
+					
